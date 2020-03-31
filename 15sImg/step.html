@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="15;URL=http://www.baidu.com" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="renderer" content="webkit" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+    <style>
+      body {
+        background: #f6f6f6;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      #img1 {
+        width: 90%;
+        margin-left: 5%;
+        display: none;
+      }
+      #img2 {
+        width: 90%;
+        margin-left: 5%;
+        display: none;
+        margin-top: 25px;
+      }
+      #img3 {
+        width: 90%;
+        margin-left: 5%;
+        display: none;
+        margin-top: 25px;
+      }
+      #img4 {
+        width: 90%;
+        margin-left: 5%;
+        display: none;
+        margin-top: 25px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- <div > -->
+    <img id="img1" src="" />
+    <img id="img2" src="" />
+    <img id="img3" src="" />
+    <img id="img4" src="" />
+    <!-- </div> -->
+    <!-- <div id="img1">
+      <img src="./img/img1.png" />
+    </div>
+    <div id="img2">
+      <img src="./img/img2.png" />
+    </div>
+    <div id="img3">
+      <img src="./img/img3.png" />
+    </div>
+    <div id="img4">
+      <img src="./img/img4.png" />
+    </div> -->
+    <script language="javascript" type="text/javascript">
+      //img1
+      var curIndex1 = 0;
+      var arr1 = new Array();
+      arr1[1] = './images/img1.png';
+      arr1[0] = './images/img1.png';
+      var img1 = window.setInterval(function() {
+        var obj = document.getElementById('img1');
+        if (curIndex1 == arr1.length - 1) {
+          curIndex1 = 0;
+        } else {
+          curIndex1 = 1;
+        }
+        obj.src = arr1[curIndex1];
+      }, 1500);
+      window.setTimeout('window.clearInterval(img1)', 3000);
+      //img2
+      var curIndex2 = 0;
+      var arr2 = new Array();
+      arr2[1] = './images/img2.png';
+      arr2[0] = './images/imgjc2.png';
+      var img2 = window.setInterval(function() {
+        var obj = document.getElementById('img2');
+        if (curIndex2 == arr2.length - 1) {
+          curIndex2 = 0;
+        } else {
+          curIndex2 = 1;
+        }
+        obj.src = arr2[curIndex2];
+      }, 2000);
+      window.setTimeout('window.clearInterval(img2)', 7000);
+      //img3
+      var curIndex3 = 0;
+      var arr3 = new Array();
+      arr3[1] = './images/img3.png';
+      arr3[0] = './images/imgjc3.png';
+      var img3 = window.setInterval(function() {
+        var obj = document.getElementById('img3');
+        if (curIndex3 == arr3.length - 1) {
+          curIndex3 = 0;
+        } else {
+          curIndex3 = 1;
+        }
+        obj.src = arr3[curIndex3];
+      }, 2000);
+      window.setTimeout('window.clearInterval(img3)', 11000);
+      //img4
+      var curIndex4 = 0;
+      var arr4 = new Array();
+      arr4[1] = './images/img4.png';
+      arr4[0] = './images/imgjc4.png';
+      var img4 = window.setInterval(function() {
+        var obj = document.getElementById('img4');
+        if (curIndex4 == arr4.length - 1) {
+          curIndex4 = 0;
+        } else {
+          curIndex4 = 1;
+        }
+        obj.src = arr4[curIndex4];
+      }, 2000);
+      window.setTimeout('window.clearInterval(img4)', 15000);
+      window.onload = function() {
+        setTimeout(function() {
+          $('#img1').fadeIn();
+        }, 1500);
+        setTimeout(function() {
+          $('#img2').fadeIn();
+        }, 4000);
+        setTimeout(function() {
+          $('#img3').fadeIn();
+        }, 8000);
+        setTimeout(function() {
+          $('#img4').fadeIn();
+        }, 12000);
+      };
+    </script>
+  </body>
+</html>
